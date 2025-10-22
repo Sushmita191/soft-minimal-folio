@@ -8,7 +8,7 @@ const Resume = () => {
       title: "Graduate Teaching Assistant",
       company: "East Tennessee State University",
       location: "Johnson City, TN",
-      period: "Aug 2024 – Present",
+      period: "Aug 2025 – Present",
       bullets: [
         "Led lab sessions and provided academic support for 126 undergraduate students in foundational and advanced programming courses, including AI and Machine Learning.",
         "Conducted code reviews, assisted with curriculum delivery, and enhanced student outcomes through structured feedback and project-based learning."
