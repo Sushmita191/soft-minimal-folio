@@ -1,0 +1,143 @@
+{
+  "identity": {
+    "name": "Sushmita Rai",
+    "location": "Johnson City, TN",
+    "email": "sushmita.rai387@gmail.com",
+    "phone": "+1 (423) 773-7048",
+    "linkedin": "linkedin.com/in/sushmita-rai-906b06157",
+    "github": "github.com/sushmitaraii1"
+  },
+  "education": [
+    {
+      "institution": "East Tennessee State University",
+      "location": "Johnson City, TN",
+      "degree": "M.S. in Computer Science",
+      "period": "May 2027 (Expected)"
+    },
+    {
+      "institution": "Kathmandu Engineering College",
+      "location": "Kathmandu, Nepal",
+      "degree": "B.S. in Computer Engineering",
+      "period": "Dec 2016 – Sept 2021"
+    }
+  ],
+  "experience": [
+    {
+      "company": "East Tennessee State University",
+      "location": "Johnson City, TN",
+      "title": "Graduate Teaching Assistant",
+      "period": "Aug 2024 – Present",
+      "bullets": [
+        "Led lab sessions and provided academic support for 126 undergraduate students in foundational and advanced programming courses, including AI and Machine Learning.",
+        "Conducted code reviews, assisted with curriculum delivery, and enhanced student outcomes through structured feedback and project-based learning."
+      ]
+    },
+    {
+      "company": "Optible AI",
+      "location": "Adelaide, Australia",
+      "title": "Machine Learning Engineer",
+      "period": "Sept 2022 – Jul 2025",
+      "bullets": [
+        "Developed an AI-driven grant proposal evaluation system with a QA model and ranking algorithm, achieving 99% accuracy and reducing assessment time by 90% across 6 major providers.",
+        "Fine-tuned a T5-based QA model with feature engineering and confidence-aware inference, improving validation accuracy to 86.34%.",
+        "Designed a weighted scoring algorithm to generate client-specific results aligned with evaluation criteria and business rules.",
+        "Conducted EDA on unstructured text, boosting NER accuracy by 90% and improving insight extraction.",
+        "Led a team to implement an end-to-end ML pipeline for data loading, preprocessing, training, and versioning.",
+        "Built an AI agent for client onboarding that reduced setup time from 8.5 hours to 30 minutes by auto-generating criteria and validation rules from PDF guidelines."
+      ]
+    },
+    {
+      "company": "Fusemachines Nepal Pvt. Ltd",
+      "location": "Kathmandu, Nepal",
+      "title": "Machine Learning Engineer Associate",
+      "period": "Apr 2021 – Aug 2022",
+      "bullets": [
+        "Designed and deployed a Virtual QA Assistant for Time Magazine to combat COVID-19 misinformation using DistilBERT, RoBERTa, and Rasa within a Haystack pipeline.",
+        "Partnered with Presto (U.S. drive-thru automation) to develop a voice-based food ordering system using ASR and NLU, improving operational efficiency.",
+        "Delivered Conversational AI training to 60+ employees and supported 100+ fellows in the Fusemachines AI Fellowship.",
+        "Built and deployed a content management API using Django REST Framework hosted on AWS EC2."
+      ]
+    },
+    {
+      "company": "Vacker360",
+      "location": "New Baneshwor, Kathmandu",
+      "title": "Associate Software Engineer",
+      "period": "Sept 2020 – Mar 2021",
+      "bullets": [
+        "Assisted in building custom add-ons on the Odoo framework.",
+        "Set up AWS Active Directory Service on an AWS EC2 Windows Server instance for role-based access control, ensuring system confidentiality and security.",
+        "Integrated IBM Watson Assistant chatbot with a custom web application."
+      ]
+    }
+  ],
+  "skills": {
+    "Programming": "C, C++, Python, JavaScript",
+    "App Development": "Django, Flask, FastAPI, .NET, Streamlit",
+    "Machine Learning": "Keras, TensorFlow, Scikit-learn, PyTorch, Pandas, Seaborn, NumPy, Rasa, SpaCy, Transformers, Hugging Face, XGBoost",
+    "Database": "PostgreSQL, MySQL, MongoDB, Elasticsearch",
+    "MLOps": "Git, Docker, AWS, GCP, MLflow, Metaflow, Airflow, Containerization",
+    "Core Areas": "Machine Learning, NLP, Information Retrieval, Computer Vision, Prompt Engineering"
+  },
+  "projects": [
+    {
+      "title": "Customer Churn Prediction",
+      "date": "Jul 2021",
+      "tools": "Streamlit, Scikit-learn, XGBoost, Docker, FastAPI",
+      "description": "Built a predictive modeling app for customer churn using feature engineering and ensemble learning, achieving 87% accuracy."
+    },
+    {
+      "title": "DERMYSOL (Skin Disease Identifier)",
+      "date": "Mar 2021",
+      "tools": "TensorFlow, Keras, Django, IBM Watson Assistant",
+      "description": "Developed a computer vision app for skin disease detection using transfer learning (fine-tuned VGG16) with 77.64% accuracy through hyperparameter tuning and augmentation."
+    },
+    {
+      "title": "SAVE BLOOD",
+      "date": "Sept 2019",
+      "tools": "HTML, CSS, JavaScript",
+      "description": "Created a web app to track, monitor, and notify about blood expiry dates, helping donation centers reduce wastage by efficiently managing stock and expiration alerts."
+    },
+    {
+      "title": "EMPAYEE (Payroll Management System)",
+      "date": "Jan 2019",
+      "tools": "ASP.NET MVC, C#, HTML, CSS, Bootstrap",
+      "description": "Developed a payroll management system with administrative and employee interfaces, enabling efficient management and transparent payroll access."
+    }
+  ],
+  "certifications": [
+    "AWS Certified Machine Learning – Specialty",
+    "Rasa Developer Certificate",
+    "Machine Learning, MLOps & Advanced Computer Vision (Coursera)"
+  ],
+  "leadership": [
+    {
+      "organization": "Girls in Tech – Nepal",
+      "location": "Kathmandu, Nepal",
+      "title": "Web Developer Ambassador",
+      "period": "Jan 2020 – Dec 2021",
+      "bullets": [
+        "Mentored participants during the pre-event of Nepal's Largest All-Female Hackathon.",
+        "Maintained and customized the nepal.girlsintech.org website using WordPress.",
+        "Initiated a front-end development team, mentoring members in HTML and CSS.",
+        "Conducted hands-on workshops on Git and GitHub for new contributors."
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Winner – The Algorithm is Female Hackathon",
+      "organization": "Ironhack, Hemper, Coderush",
+      "date": "Sept 2019"
+    },
+    {
+      "title": "Winner – The Most Creative Project",
+      "organization": "Ironhack, Hemper, Coderush",
+      "date": "Sept 2019"
+    },
+    {
+      "title": "Winner – Design Thinking Challenge",
+      "organization": "Innovative Ghar Nepal",
+      "date": "Jun 2018"
+    }
+  ]
+}

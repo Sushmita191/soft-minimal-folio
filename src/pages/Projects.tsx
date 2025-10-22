@@ -3,40 +3,28 @@ import ProjectCard from "@/components/ProjectCard";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with payment integration and inventory management.",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      link: "#",
+      title: "Customer Churn Prediction",
+      date: "Jul 2021",
+      description: "Built a predictive modeling app for customer churn using feature engineering and ensemble learning, achieving 87% accuracy.",
+      technologies: ["Streamlit", "Scikit-learn", "XGBoost", "Docker", "FastAPI"],
     },
     {
-      title: "Task Management App",
-      description: "Collaborative task management tool with real-time updates and team features.",
-      technologies: ["React", "Firebase", "Material-UI"],
-      link: "#",
+      title: "DERMYSOL (Skin Disease Identifier)",
+      date: "Mar 2021",
+      description: "Developed a computer vision app for skin disease detection using transfer learning (fine-tuned VGG16) with 77.64% accuracy through hyperparameter tuning and augmentation.",
+      technologies: ["TensorFlow", "Keras", "Django", "IBM Watson Assistant"],
     },
     {
-      title: "Weather Dashboard",
-      description: "Interactive weather dashboard with location-based forecasts and data visualization.",
-      technologies: ["React", "TypeScript", "Chart.js", "OpenWeather API"],
-      link: "#",
+      title: "SAVE BLOOD",
+      date: "Sept 2019",
+      description: "Created a web app to track, monitor, and notify about blood expiry dates, helping donation centers reduce wastage by efficiently managing stock and expiration alerts.",
+      technologies: ["HTML", "CSS", "JavaScript"],
     },
     {
-      title: "Portfolio Website",
-      description: "Custom portfolio website with responsive design and smooth animations.",
-      technologies: ["React", "Tailwind CSS", "Framer Motion"],
-      link: "#",
-    },
-    {
-      title: "Blog Platform",
-      description: "Modern blogging platform with markdown support and SEO optimization.",
-      technologies: ["Next.js", "PostgreSQL", "Prisma"],
-      link: "#",
-    },
-    {
-      title: "Chat Application",
-      description: "Real-time chat application with group messaging and file sharing capabilities.",
-      technologies: ["React", "Socket.io", "Express", "Redis"],
-      link: "#",
+      title: "EMPAYEE (Payroll Management System)",
+      date: "Jan 2019",
+      description: "Developed a payroll management system with administrative and employee interfaces, enabling efficient management and transparent payroll access.",
+      technologies: ["ASP.NET MVC", "C#", "HTML", "CSS", "Bootstrap"],
     },
   ];
 
@@ -46,12 +34,12 @@ const Projects = () => {
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center space-y-4">
             <h1 className="text-4xl sm:text-5xl font-heading font-bold text-foreground">Projects</h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-foreground max-w-2xl mx-auto">
               A collection of my work showcasing various technologies and problem-solving approaches
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
               <ProjectCard key={index} {...project} />
             ))}

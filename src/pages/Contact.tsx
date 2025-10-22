@@ -5,7 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Linkedin, Github } from "lucide-react";
+import { Mail, Linkedin, Github, Phone } from "lucide-react";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -61,7 +61,7 @@ const Contact = () => {
         <div className="max-w-4xl mx-auto space-y-12">
           <div className="text-center space-y-4">
             <h1 className="text-4xl sm:text-5xl font-heading font-bold text-foreground">Contact Me</h1>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-foreground">
               Let's connect and discuss how we can work together
             </p>
           </div>
@@ -83,6 +83,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
+                      aria-label="Your name"
                     />
                   </div>
                   <div className="space-y-2">
@@ -95,6 +96,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
+                      aria-label="Your email address"
                     />
                   </div>
                   <div className="space-y-2">
@@ -107,6 +109,7 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleChange}
                       required
+                      aria-label="Your message"
                     />
                   </div>
                   <Button type="submit" className="w-full">
@@ -123,37 +126,51 @@ const Contact = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <a
-                  href="mailto:sushmita@example.com"
-                  className="flex items-center gap-3 p-4 bg-accent/50 rounded-lg hover:bg-accent transition-smooth group"
+                  href="mailto:sushmita.rai387@gmail.com"
+                  className="flex items-center gap-3 p-4 bg-card rounded-lg hover:shadow-md transition-smooth group"
+                  aria-label="Email Sushmita Rai"
                 >
-                  <Mail className="h-5 w-5 text-muted-foreground group-hover:text-foreground transition-smooth" />
+                  <Mail className="h-5 w-5 text-foreground group-hover:text-secondary transition-smooth" />
                   <div>
                     <p className="font-medium text-foreground">Email</p>
-                    <p className="text-sm text-muted-foreground">sushmita@example.com</p>
+                    <p className="text-sm text-foreground">sushmita.rai387@gmail.com</p>
                   </div>
                 </a>
                 <a
-                  href="https://linkedin.com/in/sushmitarai"
+                  href="tel:+14237737048"
+                  className="flex items-center gap-3 p-4 bg-card rounded-lg hover:shadow-md transition-smooth group"
+                  aria-label="Call Sushmita Rai"
+                >
+                  <Phone className="h-5 w-5 text-foreground group-hover:text-secondary transition-smooth" />
+                  <div>
+                    <p className="font-medium text-foreground">Phone</p>
+                    <p className="text-sm text-foreground">+1 (423) 773-7048</p>
+                  </div>
+                </a>
+                <a
+                  href="https://linkedin.com/in/sushmita-rai-906b06157"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-4 bg-accent/50 rounded-lg hover:bg-accent transition-smooth group"
+                  className="flex items-center gap-3 p-4 bg-card rounded-lg hover:shadow-md transition-smooth group"
+                  aria-label="LinkedIn profile of Sushmita Rai"
                 >
-                  <Linkedin className="h-5 w-5 text-muted-foreground group-hover:text-foreground transition-smooth" />
+                  <Linkedin className="h-5 w-5 text-foreground group-hover:text-secondary transition-smooth" />
                   <div>
                     <p className="font-medium text-foreground">LinkedIn</p>
-                    <p className="text-sm text-muted-foreground">linkedin.com/in/sushmitarai</p>
+                    <p className="text-sm text-foreground">linkedin.com/in/sushmita-rai-906b06157</p>
                   </div>
                 </a>
                 <a
-                  href="https://github.com/sushmitarai"
+                  href="https://github.com/sushmitaraii1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-4 bg-accent/50 rounded-lg hover:bg-accent transition-smooth group"
+                  className="flex items-center gap-3 p-4 bg-card rounded-lg hover:shadow-md transition-smooth group"
+                  aria-label="GitHub profile of Sushmita Rai"
                 >
-                  <Github className="h-5 w-5 text-muted-foreground group-hover:text-foreground transition-smooth" />
+                  <Github className="h-5 w-5 text-foreground group-hover:text-secondary transition-smooth" />
                   <div>
                     <p className="font-medium text-foreground">GitHub</p>
-                    <p className="text-sm text-muted-foreground">github.com/sushmitarai</p>
+                    <p className="text-sm text-foreground">github.com/sushmitaraii1</p>
                   </div>
                 </a>
               </CardContent>
