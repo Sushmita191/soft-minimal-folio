@@ -1,12 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { NavLink } from "react-router-dom";
 import { ArrowRight, Mail, Linkedin, Github, MapPin } from "lucide-react";
+import profilePhoto from "@/assets/Sushmita_Rai_profile_photo.jpeg";
 
 const Home = () => {
   return (
     <div className="min-h-[calc(100vh-4rem)] flex items-center">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center space-y-8 py-20">
+          <div className="flex justify-center mb-8 animate-fade-in">
+            <img 
+              src={profilePhoto} 
+              alt="Sushmita Rai - Machine Learning Engineer"
+              className="w-48 h-48 rounded-full border-4 border-accent shadow-lg object-cover"
+            />
+          </div>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-heading font-bold text-foreground animate-fade-in">
             Sushmita Rai
           </h1>
@@ -51,7 +59,7 @@ const Home = () => {
 
           <p className="text-base sm:text-lg text-foreground max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.25s" }}>
             Welcome to my portfolio. I am a Machine Learning Engineer and Graduate Teaching Assistant with expertise in AI/ML, 
-            specializing in NLP, computer vision, and end-to-end ML pipeline development. I have led impactful projects across 
+            specializing in NLP, computer vision, and end-to-end ML pipeline development. Currently pursuing a Master's in Computer Science with a concentration in Artificial Intelligence and Machine Learning. I have led impactful projects across 
             grant evaluation systems, conversational AI, and educational technology, combining technical excellence with innovative 
             problem-solving to deliver scalable, data-driven solutions.
           </p>
