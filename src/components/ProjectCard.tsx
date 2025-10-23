@@ -28,7 +28,7 @@ const ProjectCard = ({ title, date, description, technologies, link }: ProjectCa
       <CardContent>
         <div className="flex flex-wrap gap-2">
           {technologies.map((tech) => (
-            <Badge key={tech} variant="secondary" className="text-xs">
+            <Badge key={tech} variant="secondary" className="text-xs text-white">
               {tech}
             </Badge>
           ))}
