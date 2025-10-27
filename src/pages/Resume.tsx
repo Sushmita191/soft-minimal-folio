@@ -20,12 +20,12 @@ const Resume = () => {
       location: "Adelaide, Australia",
       period: "Sept 2022 – Jul 2025",
       bullets: [
-        "Developed an AI-driven grant proposal evaluation system with a QA model and ranking algorithm, achieving 99% accuracy and reducing assessment time by 90% across 6 major providers.",
-        "Fine-tuned a T5-based QA model with feature engineering and confidence-aware inference, improving validation accuracy to 86.34%.",
-        "Designed a weighted scoring algorithm to generate client-specific results aligned with evaluation criteria and business rules.",
-        "Conducted EDA on unstructured text, boosting NER accuracy by 90% and improving insight extraction.",
-        "Led a team to implement an end-to-end ML pipeline for data loading, preprocessing, training, and versioning.",
-        "Built an AI agent for client onboarding that reduced setup time from 8.5 hours to 30 minutes by auto-generating criteria and validation rules from PDF guidelines."
+        "Developed an AI system with a Question Answering (QA) model for criteria matching and a ranking algorithm for final score calculation, automating grant proposal reviews with 99% accuracy and reducing assessment time by 90% across 6 major providers.",
+        "Fine-tuned a T5-based QA model with feature engineering, and confidence-aware inference, improving validation accuracy to 86.34%.",
+        "Implemented a ranking and weighted scoring algorithm on top of QA outputs, producing client-specific scores aligned with criterion importance and business rules.",
+        "Conducted EDA on unstructured text to design preprocessing strategies, boosting Named Entity Recognition (NER) accuracy by 90% and improving insight extraction.",
+        "Led a team to implement an end-to-end pipeline for data loading, preprocessing, model training, and versioning, improving automation and reproducibility.",
+        "Designed and deployed an AI agent to onboard new clients for grant assessments, reducing client setup time by 96% (from 8.5 hours to 30 minutes) by automatically generating criteria, sub-criteria, and yes/no validation questions from guidelines PDFs."
       ]
     },
     {
@@ -55,13 +55,13 @@ const Resume = () => {
 
   const education = [
     {
-      degree: "M.S. in Computer Science",
+      degree: "Master's in Computer Science",
       institution: "East Tennessee State University",
       location: "Johnson City, TN",
-      period: "May 2027 (Expected)"
+      period: "Expected Graduation May 2027"
     },
     {
-      degree: "B.S. in Computer Engineering",
+      degree: "Bachelor's in Computer Engineering",
       institution: "Kathmandu Engineering College",
       location: "Kathmandu, Nepal",
       period: "Dec 2016 – Sept 2021"
