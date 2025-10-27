@@ -58,7 +58,7 @@ const Home = () => {
           </div>
 
           <p className="text-base sm:text-lg text-foreground max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.25s" }}>
-            Welcome to my portfolio. I am a Machine Learning Engineer and Graduate Teaching Assistant with expertise in AI/ML, 
+            I am a Machine Learning Engineer with expertise in AI/ML, 
             specializing in NLP, computer vision, and end-to-end ML pipeline development. Currently pursuing a Master's in Computer Science with a concentration in Artificial Intelligence and Machine Learning. I have led impactful projects across 
             grant evaluation systems, conversational AI, and educational technology, combining technical excellence with innovative 
             problem-solving to deliver scalable, data-driven solutions.
