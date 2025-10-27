@@ -25,7 +25,7 @@ const Resume = () => {
         "Implemented a ranking and weighted scoring algorithm on top of QA outputs, producing client-specific scores aligned with criterion importance and business rules.",
         "Conducted EDA on unstructured text to design preprocessing strategies, boosting Named Entity Recognition (NER) accuracy by 90% and improving insight extraction.",
         "Led a team to implement an end-to-end pipeline for data loading, preprocessing, model training, and versioning, improving automation and reproducibility.",
-        "Designed and deployed an AI agent to onboard new clients for grant assessments, reducing client setup time by 96% (from 8.5 hours to 30 minutes) by automatically generating criteria, sub-criteria, and yes/no validation questions from guidelines PDFs."
+        "Designed and deployed an AI agent to onboard new clients for grant assessments, reducing client setup time by 96% through criteria extraction from guidelines PDFs and the automatic generation of sub-criteria and validation questions."
       ]
     },
     {

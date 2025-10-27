@@ -4,13 +4,13 @@ import { GraduationCap, MapPin } from "lucide-react";
 const Education = () => {
   const education = [
     {
-      degree: "M.S. in Computer Science",
+      degree: "Master's in Computer Science",
       institution: "East Tennessee State University",
       location: "Johnson City, TN",
-      period: "May 2027 (Expected)"
+      period: "(Expected Graduation) May 2027"
     },
     {
-      degree: "B.S. in Computer Engineering",
+      degree: "Bachelor's in Computer Engineering",
       institution: "Kathmandu Engineering College",
       location: "Kathmandu, Nepal",
       period: "Dec 2016 – Sept 2021"
