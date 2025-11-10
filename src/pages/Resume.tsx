@@ -10,8 +10,8 @@ const Resume = () => {
       location: "Johnson City, TN",
       period: "Aug 2025 – Present",
       bullets: [
-        "Led lab sessions and provided academic support for 126 undergraduate students in foundational and advanced programming courses, including AI and Machine Learning.",
-        "Conducted code reviews, assisted with curriculum delivery, and enhanced student outcomes through structured feedback and project-based learning."
+        "Leading lab sessions and providing academic support for 126 undergraduate students in foundational and advanced programming courses including AI and Machine Learning, improving coding and problem-solving proficiency.",
+        "Conducting code reviews, assisting with curriculum delivery, and enhancing student outcomes through structured feedback and project-based learning."
       ]
     },
     {
@@ -20,10 +20,10 @@ const Resume = () => {
       location: "Adelaide, Australia",
       period: "Sept 2022 – Jul 2025",
       bullets: [
-        "Developed an AI system with a Question Answering (QA) model for criteria matching and a ranking algorithm for final score calculation, automating grant proposal reviews with 99% accuracy and reducing assessment time by 90% across 6 major providers.",
-        "Fine-tuned a T5-based QA model with feature engineering, and confidence-aware inference, improving validation accuracy to 86.34%.",
+        "Developed an AI system with a Question Answering (QA) model for criteria matching and a ranking algorithm for final score calculation, automating grant proposal reviews with 97% accuracy and reducing assessment time by 90% across 6 major grant providers.",
+        "Fine-tuned a Text-to-Text Transfer Transformer (T5)-based QA model with feature engineering, and confidence-aware inference, improving validation accuracy to 86.34%.",
         "Implemented a ranking and weighted scoring algorithm on top of QA outputs, producing client-specific scores aligned with criterion importance and business rules.",
-        "Conducted EDA on unstructured text to design preprocessing strategies, boosting Named Entity Recognition (NER) accuracy by 90% and improving insight extraction.",
+        "Conducted Exploratory Data Analysis (EDA) on unstructured text to design preprocessing strategies, boosting Named Entity Recognition (NER) accuracy by 90% and improving insight extraction.",
         "Led a team to implement an end-to-end pipeline for data loading, preprocessing, model training, and versioning, improving automation and reproducibility.",
         "Designed and deployed an AI agent to onboard new clients for grant assessments, reducing client setup time by 96% through criteria extraction from guidelines PDFs and the automatic generation of sub-criteria and validation questions."
       ]
