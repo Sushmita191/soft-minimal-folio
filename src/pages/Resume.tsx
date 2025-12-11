@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Download, Briefcase, Award, GraduationCap, Code, Users, Trophy, Mail, Phone, Linkedin, Github } from "lucide-react";
+import { Download, Briefcase, Award, GraduationCap, Code, Users, Trophy, Mail, Phone, Linkedin, Github, ExternalLink } from "lucide-react";
 
 const Resume = () => {
   const experience = [
@@ -152,13 +152,37 @@ const Resume = () => {
             <p className="text-lg text-foreground">
               A comprehensive overview of my professional journey
             </p>
-            <a href="/assets/Sushmita_Rai_Resume.pdf" download>
-              <Button size="lg" className="group">
-                <Download className="mr-2 h-4 w-4" />
-                Download PDF Resume
-              </Button>
-            </a>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a href="/assets/Sushmita_Rai_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="group">
+                  <ExternalLink className="mr-2 h-4 w-4" />
+                  View PDF in Browser
+                </Button>
+              </a>
+              <a href="/assets/Sushmita_Rai_Resume.pdf" download>
+                <Button size="lg" variant="outline" className="group">
+                  <Download className="mr-2 h-4 w-4" />
+                  Download PDF
+                </Button>
+              </a>
+            </div>
           </div>
+
+          {/* Embedded PDF Preview */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Resume Preview</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="w-full aspect-[8.5/11] rounded-lg overflow-hidden border border-border">
+                <iframe
+                  src="/assets/Sushmita_Rai_Resume.pdf"
+                  className="w-full h-full"
+                  title="Resume PDF Preview"
+                />
+              </div>
+            </CardContent>
+          </Card>
 
           <Card>
             <CardHeader>
