@@ -1,31 +1,15 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { GraduationCap, MapPin } from "lucide-react";
+import { education } from "@/data/cv";
 
 const Education = () => {
-  const education = [
-    {
-      degree: "Master's in Computer Science",
-      institution: "East Tennessee State University",
-      location: "Johnson City, TN",
-      period: "(Expected Graduation) May 2027"
-    },
-    {
-      degree: "Bachelor's in Computer Engineering",
-      institution: "Kathmandu Engineering College",
-      location: "Kathmandu, Nepal",
-      period: "Dec 2016 – Sept 2021"
-    }
-  ];
-
   return (
     <div className="py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto space-y-12">
           <div className="text-center space-y-4">
             <h1 className="text-4xl sm:text-5xl font-heading font-bold text-foreground">Education</h1>
-            <p className="text-lg text-foreground">
-              Academic background and qualifications
-            </p>
+            <p className="text-lg text-foreground">Academic background and qualifications</p>
           </div>
 
           <Card>
@@ -45,6 +29,12 @@ const Education = () => {
                     <span>{edu.location}</span>
                   </div>
                   <p className="text-foreground mt-2">{edu.period}</p>
+                  {edu.thesis && (
+                    <p className="text-foreground mt-3"><span className="font-semibold">Master’s Thesis:</span> {edu.thesis}</p>
+                  )}
+                  {edu.coursework && (
+                    <p className="text-foreground mt-2"><span className="font-semibold">Relevant Graduate Coursework:</span> {edu.coursework}</p>
+                  )}
                 </div>
               ))}
             </CardContent>

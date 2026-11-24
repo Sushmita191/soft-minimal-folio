@@ -1,0 +1,1 @@
+- CV content and the CV PDF path live only in src/data/cv.ts (PDF at public/cv/); pages render from it so CV swaps need one file change.

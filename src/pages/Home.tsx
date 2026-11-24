@@ -19,7 +19,7 @@ const Home = () => {
             Sushmita Rai
           </h1>
           <p className="text-xl sm:text-2xl text-foreground font-light animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            Machine Learning Engineer | Graduate Teaching Assistant | AI/ML
+            Graduate Researcher | Machine Learning Engineer | Graduate Teaching Assistant
           </p>
           
           <div className="flex flex-wrap justify-center items-center gap-4 text-foreground animate-fade-in" style={{ animationDelay: "0.15s" }}>
@@ -58,16 +58,17 @@ const Home = () => {
           </div>
 
           <p className="text-base sm:text-lg text-foreground max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.25s" }}>
-            I am a Machine Learning Engineer with expertise in AI/ML, 
-            specializing in NLP, computer vision, and end-to-end ML pipeline development. Currently pursuing a Master's in Computer Science with a concentration in Artificial Intelligence and Machine Learning. I have led impactful projects across 
-            grant evaluation systems, conversational AI, and educational technology, combining technical excellence with innovative 
-            problem-solving to deliver scalable, data-driven solutions.
+            I am a Master of Science in Computer Science student and Graduate Researcher at East Tennessee State University,
+            where my thesis focuses on multi-modal sensor fusion for real-time cooperative 3D object detection in connected urban
+            environments. My research spans computer vision, multi-sensor fusion and 3D perception, cooperative perception, and
+            machine learning for AI-driven drug delivery. Before graduate school, I worked as a Machine Learning Engineer at Optible AI
+            and Fusemachines, building question answering, NLP, and conversational AI systems.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <NavLink to="/resume">
               <Button size="lg" className="group min-w-[180px]">
-                View Resume
+                View CV
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-smooth" />
               </Button>
             </NavLink>
