@@ -25,12 +25,48 @@ export const researchInterests = [
   "Molecular Representation Learning", "Computational Chemistry", "AI-Driven Drug Delivery",
 ];
 
-export const publicationGroups = [
+export type PublicationLink = {
+  label: string;
+  url: string;
+};
+
+export type Publication = {
+  authors: string;
+  title: string;
+  venue: string;
+  status: string;
+  tags: string[];
+  links?: PublicationLink[];
+};
+
+export type PublicationGroup = {
+  heading: string;
+  items: Publication[];
+};
+
+export const publicationGroups: PublicationGroup[] = [
   {
     heading: "Accepted Conference Papers",
     items: [
-      { authors: "S. Rai, M. Prajapati, and M. S. Khan", title: "CoTriBEV: Cooperative Tri-Modal BEV Fusion of LiDAR, Camera, and 4D Radar for Robust Roadside-Assisted 3D Object Detection", venue: "2026 IEEE 1st Annual Integrated Sensing and Communication Conference (IEEE ISAC), 2026.", status: "Accepted; publication forthcoming.", tags: ["Conference"] },
-      { authors: "M. Prajapati, S. Rai, and M. S. Khan", title: "DRIVE: Deadline-aware Roadside Intersection View Exchange for Networked Cooperative Perception", venue: "2027 IEEE Consumer Communications & Networking Conference (CCNC) Workshops, Las Vegas, Nevada, January 2027.", status: "Accepted; publication forthcoming.", tags: ["Conference", "Code"] },
+      {
+        authors: "S. Rai, M. Prajapati, and M. S. Khan",
+        title: "CoTriBEV: Cooperative Tri-Modal BEV Fusion of LiDAR, Camera, and 4D Radar for Robust Roadside-Assisted 3D Object Detection",
+        venue: "2026 IEEE 1st Annual Integrated Sensing and Communication Conference (IEEE ISAC), 2026.",
+        status: "Accepted; publication forthcoming.",
+        tags: ["Conference"],
+        links: [{ label: "Conference", url: "https://www.comsoc.org/conferences-events/ieee-conference-integrated-sensing-and-communications-2026" }],
+      },
+      {
+        authors: "M. Prajapati, S. Rai, and M. S. Khan",
+        title: "DRIVE: Deadline-aware Roadside Intersection View Exchange for Networked Cooperative Perception",
+        venue: "2027 IEEE Consumer Communications & Networking Conference (CCNC) Workshops, Las Vegas, Nevada, January 2027.",
+        status: "Accepted; publication forthcoming.",
+        tags: ["Conference", "Code"],
+        links: [
+          { label: "Conference", url: "https://ccnc2027.ieee-ccnc.org/" },
+          { label: "Code", url: "https://github.com/Nuvine-World/drive" },
+        ],
+      },
     ],
   },
   {
@@ -43,7 +79,14 @@ export const publicationGroups = [
   {
     heading: "Other Research Manuscripts Under Review or in Progress",
     items: [
-      { authors: "S. Rai, M. Prajapati, and M. S. Khan", title: "DopSync: Delay Compensation for Vehicle–Infrastructure Cooperative Perception with Track History and 4D-Radar Doppler", venue: "", status: "Under review for PerRobotics 2027.", tags: ["Workshop"] },
+      {
+        authors: "S. Rai, M. Prajapati, and M. S. Khan",
+        title: "DopSync: Delay Compensation for Vehicle–Infrastructure Cooperative Perception with Track History and 4D-Radar Doppler",
+        venue: "",
+        status: "Under review for PerRobotics 2027.",
+        tags: ["Workshop"],
+        links: [{ label: "Workshop", url: "https://anuragsatpathy.github.io/perrobotics-2027/" }],
+      },
       { authors: "S. Rai", title: "ContextLNP: Evaluating Formulation and Cell Context for Cross-Publication mRNA Transfection Prediction", venue: "", status: "Research in progress.", tags: [] },
     ],
   },
@@ -102,9 +145,43 @@ export const experience = [
   },
 ];
 
+export const researchFunding = {
+  ovpr: {
+    title: "OVPR Research Funding Program (RFP) Award",
+    amount: "$15,000",
+    amountLabel: "$15,000 — Project Funding",
+    period: "July 2026 – September 2027",
+    organization: "Office of the Vice Provost for Research, East Tennessee State University",
+    proposal: "Cooperative Edge Intelligence with Multimodal Sensor Fusion for All-Weather Autonomous Perception in Urban Environments",
+    principalInvestigator: "Dr. Mohammad S. Khan",
+    role: "Research team member",
+    clarification: "This is research project funding, not a personal monetary award.",
+  },
+  travel: {
+    title: "IEEE CCNC 2027 Conference Travel Funding",
+    totalAmount: "$1,460",
+    awarded: "2026",
+    breakdown: [
+      { organization: "Graduate and Professional Student Association (GPSA), East Tennessee State University", amount: "$700" },
+      { organization: "Department of Computing, East Tennessee State University", amount: "$760" },
+    ],
+    purpose: "Conference travel support for IEEE CCNC 2027 in Las Vegas, Nevada.",
+  },
+};
+
 export const honors = [
-  { title: "OVPR Research Funding Program (RFP) Award, $15,000", period: "July 2026 – Sept 2027", subtitle: "Cooperative Edge Intelligence with Multimodal Sensor Fusion for All-Weather Autonomous Perception in Urban Environments", detail: "Research team member on a project funded by the Office of the Vice Provost for Research, East Tennessee State University (PI: Dr. Mohammad S. Khan)." },
-  { title: "IEEE CCNC 2027 Conference Travel Funding, $1,460", period: "2026", subtitle: "", detail: "Graduate and Professional Student Association (GPSA), ETSU: $700; Department of Computing, ETSU: $760." },
+  {
+    title: `${researchFunding.ovpr.title}, ${researchFunding.ovpr.amount}`,
+    period: researchFunding.ovpr.period,
+    subtitle: researchFunding.ovpr.proposal,
+    detail: `Research team member on a project funded by the ${researchFunding.ovpr.organization} (PI: ${researchFunding.ovpr.principalInvestigator}). ${researchFunding.ovpr.clarification}`,
+  },
+  {
+    title: `${researchFunding.travel.title}, ${researchFunding.travel.totalAmount}`,
+    period: researchFunding.travel.awarded,
+    subtitle: researchFunding.travel.purpose,
+    detail: researchFunding.travel.breakdown.map((item) => `${item.organization}: ${item.amount}`).join("; ") + ".",
+  },
 ];
 
 export const skills: Record<string, string> = {

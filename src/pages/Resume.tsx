@@ -2,7 +2,8 @@ import type React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Download, Briefcase, GraduationCap, Code, Trophy, Mail, Phone, Linkedin, Github, ExternalLink, FlaskConical, BookOpen, Presentation, Lightbulb } from "lucide-react";
-import { CV_PDF_URL, CV_DOWNLOAD_NAME, education, researchInterests, publicationGroups, publicationNote, research, teaching, experience, honors, skills } from "@/data/cv";
+import { CV_PDF_URL, CV_DOWNLOAD_NAME, education, researchInterests, research, teaching, experience, honors, skills } from "@/data/cv";
+import PublicationList from "@/components/PublicationList";
 
 function Entry({ title, org, location, period, note, bullets }: { title: string; org: string; location: string; period: string; note?: string; bullets: string[] }) {
   return (
@@ -129,25 +130,7 @@ const Resume = () => {
           </Section>
 
           <Section icon={BookOpen} title="Publications and Manuscripts">
-            {(() => { let n = 0; return publicationGroups.map((g) => (
-              <div key={g.heading} className="space-y-4">
-                <h4 className="font-heading font-semibold text-lg text-foreground">{g.heading}</h4>
-                <ol className="space-y-4">
-                  {g.items.map((p) => { n += 1; return (
-                    <li key={p.title} className="border-l-2 border-accent pl-4">
-                      <p className="text-foreground leading-relaxed">
-                        <span className="font-medium">[{n}]</span> {p.authors}, {p.venue ? <>“{p.title},” <em>{p.venue}</em></> : <>“{p.title}.”</>}
-                      </p>
-                      <p className="text-sm text-foreground mt-1">
-                        <span className="font-semibold">Status:</span> {p.status}
-                        {p.tags.map((t) => <span key={t} className="ml-2 px-2 py-0.5 rounded bg-secondary text-secondary-foreground text-xs">{t}</span>)}
-                      </p>
-                    </li>
-                  ); })}
-                </ol>
-              </div>
-            )); })()}
-            <p className="text-sm text-foreground">{publicationNote}</p>
+            <PublicationList />
           </Section>
 
           <Section icon={FlaskConical} title="Research Experience">
