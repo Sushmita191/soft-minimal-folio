@@ -1,13 +1,20 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Linkedin, Github, MapPin } from "lucide-react";
+import { ArrowRight, Linkedin, Github, FileText } from "lucide-react";
+import { CV_PDF_URL } from "@/data/cv";
 import profilePhoto from "@/assets/Sushmita_Rai_profile_photo.jpeg";
 import Experience from "@/pages/Resume";
 import Research from "@/pages/Research";
 import Projects from "@/pages/Projects";
 import Education from "@/pages/Education";
 import Contact from "@/pages/Contact";
+
+const profileLinks = [
+  { href: "https://linkedin.com/in/sushmita-rai-906b06157", label: "LinkedIn", ariaLabel: "LinkedIn Profile", Icon: Linkedin },
+  { href: "https://github.com/sushmitaraii1", label: "GitHub", ariaLabel: "GitHub Profile", Icon: Github },
+  { href: CV_PDF_URL, label: "CV", ariaLabel: "View CV (PDF)", Icon: FileText },
+];
 
 const Home = () => {
   const location = useLocation();
@@ -44,35 +51,25 @@ const Home = () => {
               Graduate Researcher | Machine Learning Engineer | Graduate Teaching Assistant
             </p>
 
-            <div className="flex flex-wrap justify-center items-center gap-4 text-foreground animate-fade-in" style={{ animationDelay: "0.15s" }}>
-              <div className="flex items-center gap-2">
-                <MapPin className="h-4 w-4" />
-                <span>Johnson City, TN</span>
-              </div>
-            </div>
-
-            <div className="flex justify-center gap-4 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <a
-                href="https://linkedin.com/in/sushmita-rai-906b06157"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-card rounded-lg hover:shadow-md transition-smooth"
-                aria-label="LinkedIn Profile"
-              >
-                <Linkedin className="h-5 w-5" />
-                <span className="text-sm">LinkedIn</span>
-              </a>
-              <a
-                href="https://github.com/sushmitaraii1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-card rounded-lg hover:shadow-md transition-smooth"
-                aria-label="GitHub Profile"
-              >
-                <Github className="h-5 w-5" />
-                <span className="text-sm">GitHub</span>
-              </a>
-            </div>
+            <nav
+              aria-label="Profile links"
+              className="flex flex-wrap justify-center gap-3 animate-fade-in"
+              style={{ animationDelay: "0.15s" }}
+            >
+              {profileLinks.map(({ href, label, ariaLabel, Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={ariaLabel}
+                  className="flex items-center gap-2 px-4 py-2 bg-card rounded-lg text-foreground hover:shadow-md transition-smooth"
+                >
+                  <Icon className="h-5 w-5" />
+                  <span className="text-sm">{label}</span>
+                </a>
+              ))}
+            </nav>
 
             <p className="text-base sm:text-lg text-foreground max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.25s" }}>
               I am a Master of Science in Computer Science student and Graduate Researcher at East Tennessee State University,
