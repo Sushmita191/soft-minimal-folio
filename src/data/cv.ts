@@ -9,7 +9,7 @@ export const education = [
     location: "Johnson City, Tennessee, USA",
     period: "Aug 2025 – May 2027 (Expected)",
     thesis: "Multi-Modal Sensor Fusion Architecture for Real-Time Cooperative 3D Object Detection in Connected Urban Environments.",
-    coursework: "Artificial Intelligence, Machine Learning, Research Methods, Natural Language Processing, Analysis of Algorithms.",
+    coursework: "Artificial Intelligence, Machine Learning, Research Methods, Natural Language Processing, Analysis of Algorithms, Applied Mathematics II (Spring 2027).",
   },
   {
     degree: "Bachelor’s in Computer Engineering",
@@ -79,14 +79,6 @@ export const publicationGroups: PublicationGroup[] = [
   {
     heading: "Other Research Manuscripts Under Review or in Progress",
     items: [
-      {
-        authors: "S. Rai, M. Prajapati, and M. S. Khan",
-        title: "DopSync: Delay Compensation for Vehicle–Infrastructure Cooperative Perception with Track History and 4D-Radar Doppler",
-        venue: "",
-        status: "Under review for PerRobotics 2027.",
-        tags: ["Workshop"],
-        links: [{ label: "Workshop", url: "https://anuragsatpathy.github.io/perrobotics-2027/" }],
-      },
       { authors: "S. Rai", title: "ContextLNP: Evaluating Formulation and Cell Context for Cross-Publication mRNA Transfection Prediction", venue: "", status: "Research in progress.", tags: [] },
     ],
   },
@@ -174,7 +166,7 @@ export const honors = [
     title: `${researchFunding.ovpr.title}, ${researchFunding.ovpr.amount}`,
     period: researchFunding.ovpr.period,
     subtitle: researchFunding.ovpr.proposal,
-    detail: `Research team member on a project funded by the ${researchFunding.ovpr.organization} (PI: ${researchFunding.ovpr.principalInvestigator}). ${researchFunding.ovpr.clarification}`,
+    detail: `Research team member on a project funded by the ${researchFunding.ovpr.organization} (PI: ${researchFunding.ovpr.principalInvestigator}).`,
   },
   {
     title: `${researchFunding.travel.title}, ${researchFunding.travel.totalAmount}`,
