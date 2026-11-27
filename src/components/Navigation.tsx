@@ -4,10 +4,10 @@ import { useLocation } from "react-router-dom";
 
 const links = [
   { id: "home", label: "Home" },
-  { id: "resume", label: "Resume" },
+  { id: "experience", label: "Experience" },
   { id: "research", label: "Research" },
-  { id: "projects", label: "Projects" },
   { id: "education", label: "Education" },
+  { id: "projects", label: "Projects" },
   { id: "contact", label: "Contact Me" },
 ];
 
@@ -18,7 +18,8 @@ const Navigation = () => {
 
   useEffect(() => {
     if (location.pathname !== "/") {
-      setActiveSection(location.pathname.slice(1));
+      const page = location.pathname.slice(1);
+      setActiveSection(page === "resume" ? "experience" : page);
       return;
     }
 

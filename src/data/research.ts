@@ -65,11 +65,13 @@ function publicationTimelineEntry(
   titleStart: string,
   category: string,
   description: string,
+  date?: string,
 ): ResearchTimelineEntry {
   const publication = publicationByTitle(titleStart);
   return {
     title: publication.title,
     category,
+    date,
     description,
     authors: publication.authors,
     status: publication.status,
@@ -109,24 +111,18 @@ export const researchTimeline: ResearchTimelineYear[] = [
     year: "2026",
     heading: "Research Development and Academic Milestones",
     entries: [
-      publicationTimelineEntry("CoTriBEV:", "Accepted Conference Paper", research[0].bullets[0]),
-      publicationTimelineEntry("DRIVE:", "Accepted Conference Paper", research[0].bullets[1]),
-      {
-        title: "DopSync: Training-free delay compensation for cooperative perception",
-        category: "Graduate Research",
-        description: research[0].bullets[2],
-        status: "Ongoing",
-      },
-      publicationTimelineEntry("Integrating Graph Neural Network", "Journal Manuscript", research[1].bullets[1]),
-      publicationTimelineEntry("ContextLNP:", "Research in Progress", research[1].bullets[2]),
-      publicationTimelineEntry("Multi-Sensor Fusion for Autonomous", "Book Chapter", research[0].bullets[3]),
       {
         title: researchFunding.ovpr.title,
         category: "Research Project Funding",
         date: researchFunding.ovpr.period,
-        description: `${researchFunding.ovpr.amountLabel}. Funding organization: ${researchFunding.ovpr.organization}. Funded proposal: ${researchFunding.ovpr.proposal}. Principal Investigator: ${researchFunding.ovpr.principalInvestigator}. My role: ${researchFunding.ovpr.role}. ${researchFunding.ovpr.clarification}`,
+        description: `${researchFunding.ovpr.amountLabel}. Funding organization: ${researchFunding.ovpr.organization}. Funded proposal: ${researchFunding.ovpr.proposal}. Principal Investigator: ${researchFunding.ovpr.principalInvestigator}. My role: ${researchFunding.ovpr.role}.`,
         status: "Awarded",
       },
+      publicationTimelineEntry("CoTriBEV:", "Conference Paper", research[0].bullets[0], "Accepted Oct 2026"),
+      publicationTimelineEntry("DRIVE:", "Conference Paper", research[0].bullets[1], "Accepted Nov 2026"),
+      publicationTimelineEntry("Integrating Graph Neural Network", "Journal Manuscript", research[1].bullets[1]),
+      publicationTimelineEntry("ContextLNP:", "Research in Progress", research[1].bullets[2]),
+      publicationTimelineEntry("Multi-Sensor Fusion for Autonomous", "Book Chapter", research[0].bullets[3]),
       {
         title: researchFunding.travel.title,
         category: "Conference Travel Funding",
@@ -154,13 +150,6 @@ export const researchTimeline: ResearchTimelineYear[] = [
         category: "Master’s Thesis",
         date: "May 2027",
         description: thesisTitle,
-        status: "Upcoming",
-        upcoming: true,
-      },
-      {
-        title: "Additional research milestones as they occur",
-        category: "Future Research",
-        description: "Additional research milestones as they occur.",
         status: "Upcoming",
         upcoming: true,
       },

@@ -51,8 +51,8 @@ export const publicationGroups: PublicationGroup[] = [
       {
         authors: "S. Rai, M. Prajapati, and M. S. Khan",
         title: "CoTriBEV: Cooperative Tri-Modal BEV Fusion of LiDAR, Camera, and 4D Radar for Robust Roadside-Assisted 3D Object Detection",
-        venue: "2026 IEEE 1st Annual Integrated Sensing and Communication Conference (IEEE ISAC), 2026.",
-        status: "Accepted; publication forthcoming.",
+        venue: "2026 IEEE 1st Annual Integrated Sensing and Communication Conference (IEEE ISAC), November 2026.",
+        status: "Accepted October 2026; publication forthcoming.",
         tags: ["Conference"],
         links: [{ label: "Conference", url: "https://www.comsoc.org/conferences-events/ieee-conference-integrated-sensing-and-communications-2026" }],
       },
@@ -60,7 +60,7 @@ export const publicationGroups: PublicationGroup[] = [
         authors: "M. Prajapati, S. Rai, and M. S. Khan",
         title: "DRIVE: Deadline-aware Roadside Intersection View Exchange for Networked Cooperative Perception",
         venue: "2027 IEEE Consumer Communications & Networking Conference (CCNC) Workshops, Las Vegas, Nevada, January 2027.",
-        status: "Accepted; publication forthcoming.",
+        status: "Accepted November 2026; publication forthcoming.",
         tags: ["Conference", "Code"],
         links: [
           { label: "Conference", url: "https://ccnc2027.ieee-ccnc.org/" },
@@ -70,14 +70,14 @@ export const publicationGroups: PublicationGroup[] = [
     ],
   },
   {
-    heading: "Journal Manuscripts and Book Chapters Under Review or Revision",
+    heading: "Journal Manuscripts and Book Chapters",
     items: [
       { authors: "S. Rai†, M. Prajapati†, and M. Rasoulianboroujeni", title: "Integrating Graph Neural Network Representations with Morgan Fingerprints for Ionizable Lipid Transfection Prediction", venue: "Applied Sciences (MDPI).", status: "Invited submission; under revision.", tags: [] },
       { authors: "S. Rai, M. Prajapati, and M. S. Khan", title: "Multi-Sensor Fusion for Autonomous Vehicle Perception: Principles, Algorithms, and Cooperative Sensing", venue: "Wiley Encyclopedia of Electrical and Electronics Engineering.", status: "Book chapter under review.", tags: [] },
     ],
   },
   {
-    heading: "Other Research Manuscripts Under Review or in Progress",
+    heading: "Research in Progress",
     items: [
       { authors: "S. Rai", title: "ContextLNP: Evaluating Formulation and Cell Context for Cross-Publication mRNA Transfection Prediction", venue: "", status: "Research in progress.", tags: [] },
     ],
@@ -142,12 +142,11 @@ export const researchFunding = {
     title: "OVPR Research Funding Program (RFP) Award",
     amount: "$15,000",
     amountLabel: "$15,000 — Project Funding",
-    period: "July 2026 – September 2027",
+    period: "July 2026 – Sept 2027",
     organization: "Office of the Vice Provost for Research, East Tennessee State University",
     proposal: "Cooperative Edge Intelligence with Multimodal Sensor Fusion for All-Weather Autonomous Perception in Urban Environments",
     principalInvestigator: "Dr. Mohammad S. Khan",
     role: "Research team member",
-    clarification: "This is research project funding, not a personal monetary award.",
   },
   travel: {
     title: "IEEE CCNC 2027 Conference Travel Funding",

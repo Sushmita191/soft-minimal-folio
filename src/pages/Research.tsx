@@ -1,6 +1,6 @@
 import type React from "react";
 import { ExternalLink } from "lucide-react";
-import PublicationList, { AuthorNames } from "@/components/PublicationList";
+import PublicationList from "@/components/PublicationList";
 import { researchFunding } from "@/data/cv";
 import {
   mastersThesis,
@@ -58,6 +58,38 @@ const Research = () => {
             </div>
           </ResearchSection>
 
+          <ResearchSection title="Publications and Manuscripts">
+            <PublicationList />
+          </ResearchSection>
+
+          <ResearchSection title="Research Funding, Honors, and Awards">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <article className="border-l-2 border-accent pl-4 space-y-2">
+                <h3 className="text-xl font-heading font-semibold text-foreground">{researchFunding.ovpr.title}</h3>
+                <p className="text-foreground font-medium">{researchFunding.ovpr.amountLabel}</p>
+                <p className="text-foreground"><span className="font-semibold">Funding period:</span> {researchFunding.ovpr.period}.</p>
+                <p className="text-foreground"><span className="font-semibold">Funding organization:</span> {researchFunding.ovpr.organization}.</p>
+                <p className="text-foreground"><span className="font-semibold">Funded proposal:</span> {researchFunding.ovpr.proposal}.</p>
+                <p className="text-foreground"><span className="font-semibold">Principal Investigator:</span> {researchFunding.ovpr.principalInvestigator}.</p>
+                <p className="text-foreground"><span className="font-semibold">My role:</span> {researchFunding.ovpr.role}.</p>
+              </article>
+
+              <article className="border-l-2 border-accent pl-4 space-y-2">
+                <h3 className="text-xl font-heading font-semibold text-foreground">{researchFunding.travel.title}</h3>
+                <p className="text-foreground font-medium">Total amount: {researchFunding.travel.totalAmount}</p>
+                <p className="text-foreground">Awarded in {researchFunding.travel.awarded}.</p>
+                <p className="text-foreground">{researchFunding.travel.purpose}</p>
+                <div>
+                  <p className="font-semibold text-foreground">Funding breakdown:</p>
+                  <ul className="list-disc list-inside space-y-1 mt-1">
+                    {researchFunding.travel.breakdown.map((item) => (
+                      <li key={item.organization} className="text-foreground">{item.organization}: {item.amount}.</li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </ResearchSection>
           <ResearchSection title="Year-Wise Research Timeline">
             <p className="text-foreground">Completed and ongoing work is listed separately from upcoming milestones.</p>
             <div className="space-y-10">
@@ -66,7 +98,7 @@ const Research = () => {
                   <h3 id={`research-year-${year.year}`} className="text-2xl font-heading font-semibold text-foreground">
                     {year.year} — {year.heading}
                   </h3>
-                  <div className="mt-5 border-l border-border pl-6 space-y-8">
+                  <div className="mt-5 border-l border-border pl-6 space-y-5">
                     {year.entries.map((entry) => (
                       <article key={`${year.year}-${entry.title}`} className="relative">
                         <span className="absolute -left-[29px] top-2 h-2 w-2 rounded-full bg-accent" aria-hidden="true" />
@@ -80,17 +112,11 @@ const Research = () => {
                           {entry.date && <span>{entry.date} · </span>}
                           <span>{entry.category}</span>
                         </p>
-                        {entry.authors && (
-                          <p className="text-sm text-foreground mt-2">
-                            <span className="font-semibold">Authors and collaborators:</span> <AuthorNames authors={entry.authors} />
-                          </p>
-                        )}
                         {entry.status && !entry.upcoming && (
-                          <p className="text-sm text-foreground mt-2"><span className="font-semibold">Status:</span> {entry.status}</p>
+                          <p className="text-sm text-foreground mt-1"><span className="font-semibold">Status:</span> {entry.status}</p>
                         )}
-                        <p className="text-foreground leading-relaxed mt-2">{entry.description}</p>
                         {entry.links && entry.links.length > 0 && (
-                          <div className="flex flex-wrap gap-4 mt-3">
+                          <div className="flex flex-wrap gap-4 mt-1">
                             {entry.links.map((link) => (
                               <a
                                 key={link.url}
@@ -113,39 +139,6 @@ const Research = () => {
             </div>
           </ResearchSection>
 
-          <ResearchSection title="Publications and Manuscripts">
-            <PublicationList />
-          </ResearchSection>
-
-          <ResearchSection title="Research Funding, Honors, and Awards">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <article className="border-l-2 border-accent pl-4 space-y-2">
-                <h3 className="text-xl font-heading font-semibold text-foreground">{researchFunding.ovpr.title}</h3>
-                <p className="text-foreground font-medium">{researchFunding.ovpr.amountLabel}</p>
-                <p className="text-foreground"><span className="font-semibold">Funding period:</span> {researchFunding.ovpr.period}.</p>
-                <p className="text-foreground"><span className="font-semibold">Funding organization:</span> {researchFunding.ovpr.organization}.</p>
-                <p className="text-foreground"><span className="font-semibold">Funded proposal:</span> {researchFunding.ovpr.proposal}.</p>
-                <p className="text-foreground"><span className="font-semibold">Principal Investigator:</span> {researchFunding.ovpr.principalInvestigator}.</p>
-                <p className="text-foreground"><span className="font-semibold">My role:</span> {researchFunding.ovpr.role}.</p>
-                <p className="text-foreground italic">{researchFunding.ovpr.clarification}</p>
-              </article>
-
-              <article className="border-l-2 border-accent pl-4 space-y-2">
-                <h3 className="text-xl font-heading font-semibold text-foreground">{researchFunding.travel.title}</h3>
-                <p className="text-foreground font-medium">Total amount: {researchFunding.travel.totalAmount}</p>
-                <p className="text-foreground">Awarded in {researchFunding.travel.awarded}.</p>
-                <p className="text-foreground">{researchFunding.travel.purpose}</p>
-                <div>
-                  <p className="font-semibold text-foreground">Funding breakdown:</p>
-                  <ul className="list-disc list-inside space-y-1 mt-1">
-                    {researchFunding.travel.breakdown.map((item) => (
-                      <li key={item.organization} className="text-foreground">{item.organization}: {item.amount}.</li>
-                    ))}
-                  </ul>
-                </div>
-              </article>
-            </div>
-          </ResearchSection>
         </div>
       </div>
     </div>

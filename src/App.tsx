@@ -4,7 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Resume from "./pages/Resume";
+import Experience from "./pages/Resume";
 import Research from "./pages/Research";
 import Projects from "./pages/Projects";
 import Education from "./pages/Education";
@@ -26,7 +26,8 @@ const App = () => (
           <main className="flex-1 pt-16">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/resume" element={<Resume />} />
+              <Route path="/experience" element={<Experience />} />
+              <Route path="/resume" element={<Experience />} />
               <Route path="/research" element={<Research />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/education" element={<Education />} />

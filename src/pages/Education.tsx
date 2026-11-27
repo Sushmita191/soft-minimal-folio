@@ -29,9 +29,6 @@ const Education = () => {
                     <span>{edu.location}</span>
                   </div>
                   <p className="text-foreground mt-2">{edu.period}</p>
-                  {edu.thesis && (
-                    <p className="text-foreground mt-3"><span className="font-semibold">Master’s Thesis:</span> {edu.thesis}</p>
-                  )}
                   {edu.coursework && (
                     <p className="text-foreground mt-2"><span className="font-semibold">Relevant Graduate Coursework:</span> {edu.coursework}</p>
                   )}

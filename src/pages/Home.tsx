@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Mail, Linkedin, Github, MapPin } from "lucide-react";
+import { ArrowRight, Linkedin, Github, MapPin } from "lucide-react";
 import profilePhoto from "@/assets/Sushmita_Rai_profile_photo.jpeg";
-import Resume from "@/pages/Resume";
+import Experience from "@/pages/Resume";
 import Research from "@/pages/Research";
 import Projects from "@/pages/Projects";
 import Education from "@/pages/Education";
@@ -16,7 +16,9 @@ const Home = () => {
     if (!location.hash) return;
 
     const frame = window.requestAnimationFrame(() => {
-      const section = document.getElementById(location.hash.slice(1));
+      // Old links used #resume; that section is now #experience.
+      const id = location.hash.slice(1) === "resume" ? "experience" : location.hash.slice(1);
+      const section = document.getElementById(id);
       section?.scrollIntoView({ block: "start" });
     });
 
@@ -47,11 +49,6 @@ const Home = () => {
                 <MapPin className="h-4 w-4" />
                 <span>Johnson City, TN</span>
               </div>
-              <span className="hidden sm:inline">|</span>
-              <a href="mailto:sushmita.rai387@gmail.com" className="flex items-center gap-2 hover:text-secondary transition-smooth">
-                <Mail className="h-4 w-4" />
-                <span>sushmita.rai387@gmail.com</span>
-              </a>
             </div>
 
             <div className="flex justify-center gap-4 animate-fade-in" style={{ animationDelay: "0.2s" }}>
@@ -86,9 +83,9 @@ const Home = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{ animationDelay: "0.3s" }}>
-              <a href="#resume">
+              <a href="#experience">
                 <Button size="lg" className="group min-w-[180px]">
-                  View CV
+                  View Experience
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-smooth" />
                 </Button>
               </a>
@@ -102,17 +99,17 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="resume" aria-label="Resume">
-        <Resume />
+      <section id="experience" aria-label="Experience">
+        <Experience />
       </section>
       <section id="research" aria-label="Research">
         <Research />
       </section>
-      <section id="projects" aria-label="Projects">
-        <Projects />
-      </section>
       <section id="education" aria-label="Education">
         <Education />
+      </section>
+      <section id="projects" aria-label="Projects">
+        <Projects />
       </section>
       <section id="contact" aria-label="Contact Me">
         <Contact />
